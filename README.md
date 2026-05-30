@@ -27,19 +27,19 @@ Designed with editorial typography, a sage-green palette, and a dark/light theme
 - **Typography:** Instrument Serif, Inter, JetBrains Mono (via Google Fonts)
 
 ## 🗂️ Project Structure
+
+```
 ZenJournal/
-├── app.py # Main journal application
-├── backend.py # MoodAI class — sentiment logic + data persistence
-├── theme.py # Dark/light theme tokens + toggle state
-├── styles.py # Theme-aware CSS generator
-├── components.py # Reusable UI components (animated logo)
-├── landing.py # Marketing landing page
+├── app.py           # Main journal application
+├── backend.py       # MoodAI class — sentiment logic + data persistence
+├── theme.py         # Dark/light theme tokens + toggle state
+├── styles.py        # Theme-aware CSS generator
+├── components.py    # Reusable UI components (animated logo)
+├── landing.py       # Marketing landing page
 ├── assets/
-│ └── favicon.svg
+│   └── favicon.svg
 └── requirements.txt
-
-text
-
+```
 
 ## 💻 Run Locally
 
@@ -58,3 +58,28 @@ source venv/bin/activate
 pip install -r requirements.txt
 
 streamlit run app.py
+```
+
+To preview the marketing landing page:
+
+```bash
+streamlit run landing.py
+```
+
+## 🎨 Design Philosophy
+
+> *"Calm intelligence."*
+
+ZenJournal is inspired by apps like **Linear, Notion, Things 3, and Day One** — favoring editorial typography, generous whitespace, and a single intentional accent color over the typical "AI app" aesthetic.
+
+## 📌 Roadmap
+
+- [ ] Streak counter
+- [ ] Weekly AI summaries
+- [ ] Keyboard shortcut to save (⌘ + Enter)
+- [ ] Calendar heatmap view
+- [ ] Export to PDF / Markdown
+
+---
+
+*Built as a personal project to explore NLP, design systems, and full-stack UI engineering in Python.*
