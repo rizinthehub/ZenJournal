@@ -85,8 +85,4 @@ ZenJournal is inspired by apps like **Linear, Notion, Things 3, and Day One** â€
 
 ---
 
-<<<<<<< HEAD
 *Built as a personal project to explore NLP, design systems, and full-stack UI engineering in Python.*
-=======
-*Built as a personal project to explore NLP, design systems, and full-stack UI engineering in Python.*
->>>>>>> 080a13660a3740265a31d9e8f76df6778d4770f2
