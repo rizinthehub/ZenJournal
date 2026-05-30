@@ -1,6 +1,8 @@
 import streamlit as st
 import pandas as pd
 from backend import MoodAI # Importing our own module
+from wordcloud import WordCloud
+import matplotlib.pyplot as plt
 
 # 1. UI Configuration (Must be the first command)
 st.set_page_config(page_title="ZenJournal", page_icon="🧠", layout="centered")
@@ -9,13 +11,13 @@ st.set_page_config(page_title="ZenJournal", page_icon="🧠", layout="centered")
 st.markdown("""
     <style>
     .stTextArea textarea {
-        background-color: #f0f2f6;
-        color: #31333F;
+        background-color: #262730;
+        color: #FAFAFA;
     }
     .main-title {
         font-size: 3em;
         font-weight: bold;
-        color: #4B4B4B;
+        color: #FFFFFF;
         text-align: center;
     }
     </style>
@@ -68,3 +70,16 @@ try:
             
 except Exception as e:
     st.write("No data available yet. Write your first entry!")
+
+    from wordcloud import WordCloud
+import matplotlib.pyplot as plt
+
+if not data.empty:
+    st.subheader("☁️ What's on your mind?")
+    text = " ".join(data['Entry'])
+    wordcloud = WordCloud(width=800, height=400, background_color='black').generate(text)
+    
+    fig, ax = plt.subplots()
+    ax.imshow(wordcloud, interpolation='bilinear')
+    ax.axis("off") # Hide axes
+    st.pyplot(fig)
