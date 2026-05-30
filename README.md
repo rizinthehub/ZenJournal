@@ -1,22 +1,47 @@
-# 🧠 ZenJournal
+<img src="https://raw.githubusercontent.com/rizinthehub/ZenJournal/main/assets/favicon.svg" width="40" align="left" style="margin-right: 12px;" />
 
-**ZenJournal** is an AI-powered smart diary that helps track your mental health. It uses Natural Language Processing (NLP) to analyze daily journal entries and visualize mood trends over time.
+# ZenJournal
 
-## 🚀 Features
+**ZenJournal** is an AI-powered journaling app built for calm, reflective writing. It uses Natural Language Processing to analyze your daily entries, visualize mood trends, and surface recurring themes from your own words.
 
-- **AI Sentiment Analysis** – Uses TextBlob to classify entries as Positive, Neutral, or Negative
-- **Mood Visualization** – Interactive charts powered by Streamlit
-- **Local Storage** – All data is stored securely on your local machine
-- **Modern UI** – Clean interface with dark-mode support
+Designed with editorial typography, a sage-green palette, and a dark/light theme system — built to feel like a quiet room, not a dashboard.
+
+## ✦ Features
+
+- **AI Sentiment Analysis** – Real-time mood detection on every entry using TextBlob
+- **Mood Timeline** – Smooth gradient area chart of your emotional trends (Altair)
+- **Theme Discovery** – Auto-generated pill cloud of recurring words from your journal
+- **Entry Timeline** – Clean, journal-style list of recent entries with sentiment indicators
+- **Dark / Light Mode** – One-click theme toggle with a calming sage accent
+- **Time-Aware Greeting** – Personalized opening that adapts to morning, afternoon, or evening
+- **Local-First** – All entries stay on your machine in a private CSV
+- **Editorial Design** – Custom typography (Instrument Serif + Inter) and motion design
 
 ## 🛠️ Tech Stack
 
-- **Language:** Python 3  
-- **Frontend:** Streamlit  
-- **AI / NLP:** TextBlob  
-- **Data Handling:** Pandas  
+- **Language:** Python 3
+- **Frontend:** Streamlit + custom CSS
+- **AI / NLP:** TextBlob (sentiment analysis)
+- **Visualization:** Altair (gradient area charts)
+- **Data:** Pandas + CSV
+- **Typography:** Instrument Serif, Inter, JetBrains Mono (via Google Fonts)
 
-## 💻 How to Run Locally
+## 🗂️ Project Structure
+ZenJournal/
+├── app.py # Main journal application
+├── backend.py # MoodAI class — sentiment logic + data persistence
+├── theme.py # Dark/light theme tokens + toggle state
+├── styles.py # Theme-aware CSS generator
+├── components.py # Reusable UI components (animated logo)
+├── landing.py # Marketing landing page
+├── assets/
+│ └── favicon.svg
+└── requirements.txt
+
+text
+
+
+## 💻 Run Locally
 
 ```bash
 git clone https://github.com/rizinthehub/ZenJournal.git
@@ -32,4 +57,4 @@ source venv/bin/activate
 
 pip install -r requirements.txt
 
-streamlit run main.py
+streamlit run app.py
